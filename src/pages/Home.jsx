@@ -81,7 +81,7 @@ function Home() {
           <CardList countries={currentCountries} />
           <ul className="pagination flex flex-wrap justify-center">
             {pageNumbers.map((number) => (
-              <li key={number} className="page-item m-2 mt-10">
+              <li key={number} className="page-item xl:m-4 mt-10 md: m-2">
                 <button
                   onClick={() => paginate(number)}
                   className={`${

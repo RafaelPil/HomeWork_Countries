@@ -10,7 +10,7 @@ const Header = ({ sortBtn, filterByArea, filterByRegion }) => {
         <div className="flex flex-col md:flex-row justify-start">
           <button
             onClick={sortBtn}
-            className="bg-blue-500 text-white py-2 px-4 rounded-full mb-4 md:mb-0 mr-4"
+            className="bg-blue-500 text-white py-2 px-4 rounded-full mb-4 md:mb-0 sm:mr-0 md:mr-4"
           >
             Sort by name
           </button>
