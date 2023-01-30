@@ -6,7 +6,7 @@ const Card = ({ countries }) => {
       {countries.map((country) => (
         <div
           key={country.name}
-          className="w-full p-6 bg-gray-50 rounded-lg shadow-lg mt-10"
+          className="w-full p-6 bg-gray-50 rounded-lg shadow-lg mt-4"
         >
           <h3 className="text-xl font-bold mb-4">{country.name}</h3>
           <p className="text-gray-700 font-medium mb-2">
