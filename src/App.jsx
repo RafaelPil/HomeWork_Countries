@@ -1,9 +1,11 @@
+import { data } from "autoprefixer";
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 
 function App() {
   const [countries, setCountries] = useState([]);
+  const [sortASC, setSortASC] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -16,11 +18,19 @@ function App() {
     };
     fetchData();
   }, []);
-  
-  
+
+  const sortBtn = () => {
+    setSortAscending(!sortASC);
+    setCountries(
+      [...countries].sort((a, b) =>
+        (sortASC ? a.name > b.name : a.name < b.name) ? 1 : -1
+      )
+    );
+  };
+
   return (
-    <div className="App">
-      <Header />
+    <div>
+      <Header sortBtn={sortBtn} />
       <Home countries={countries} />
     </div>
   );
